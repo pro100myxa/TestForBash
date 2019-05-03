@@ -1,0 +1,30 @@
+.subscribe {
+  &-block {
+    margin-bottom: 90px;
+  }
+  &-title {}
+  &-form {
+    & .form-group {
+      display: flex;
+    }
+    & .form-control_wrap {
+      flex: 1;
+      position: relative;
+      margin-right: 40px;
+    }
+  }
+  &-submit {
+    color: $secondary;
+    font-size: 28px;
+    letter-spacing: 1.12px;
+    font-weight: 700;
+    font-family: $headings-font-family;
+    border: none;
+    &:hover {
+      opacity: .6;
+    }
+    &:active {
+      opacity: .8;
+    }
+  }
+}

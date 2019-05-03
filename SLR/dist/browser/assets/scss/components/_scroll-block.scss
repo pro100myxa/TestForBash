@@ -1,0 +1,52 @@
+.scroll-next {
+  position: absolute;
+  bottom: 40px;
+  left: 0px;
+  right: 0px;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+
+.chevron-botom {
+  margin-top: 20px;
+  display: block;
+  animation: pulse 2s infinite;
+  color: $secondary;
+  transition: all 0.3s;
+  &:hover {
+    color: darken($secondary, 10%);
+  }
+  &:active {
+    color: darken($secondary, 15%);
+  }
+  &:before {
+    border-style: solid;
+    border-width: 3px 3px 0 0;
+    content: "";
+    display: inline-block;
+    height: 20px;
+    position: relative;
+    -webkit-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    vertical-align: top;
+    width: 20px;
+    top: 0;
+    -webkit-transform: rotate(135deg);
+    -ms-transform: rotate(135deg);
+    transform: rotate(135deg);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(0, 10px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}

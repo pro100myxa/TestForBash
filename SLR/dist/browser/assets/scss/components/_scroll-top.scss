@@ -1,0 +1,53 @@
+$scroll-top-btn-size: 50px;
+$scroll-top-btn-bg: $primary;
+button.scroll-top-btn {
+  position: fixed;
+  bottom: 0;
+  right: 50px;
+  z-index: 100;
+  width: 56px;
+  height: 56px;
+  font-size: 10px;
+  border: 2px solid $primary;
+  color: $primary;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transform: translate(0, 100%);
+  &:hover {
+    // border-color: darken($primary, 10%);
+    // color: darken($primary, 10%);
+    & i {
+      animation: pulseTop 1.5s infinite;
+    }
+  }
+  &:active {
+    // border-color: darken($primary, 15%);
+    // color: darken($primary, 15%);
+  }
+  & i {
+    position: absolute;
+  }
+  &.-show {
+    transform: translate(0, -40px);
+  }
+}
+
+@media (max-width: 991px) {
+  button.scroll-top-btn {
+    display: none !important;
+  }
+}
+
+@keyframes pulseTop {
+  0% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(0, -10px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}

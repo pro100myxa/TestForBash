@@ -1,0 +1,94 @@
+.login {
+  &-page {
+    background-color: #003E62;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    min-height: 100vh;
+    padding-bottom: 260px;
+    position: relative;
+    .login-logo {
+      display: block;
+      margin-bottom: 95px;
+    }
+  }
+  &-wrap {
+    min-width: 320px;
+    &.-login-load {
+      .login {
+        &-body {
+          opacity: 0;
+          visibility: hidden;
+        }
+        &-spinner {
+          opacity: 1;
+          visibility: visible;
+        }
+      }
+    }
+  }
+  &-body {
+    background-color: #fff;
+    padding: 20px 25px 24px;
+    transition: all .1s;
+    h5 {
+      margin-bottom: 25px;
+    }
+    p {
+      margin-top: -10px;
+    }
+    .input-control {
+      display: block;
+      margin-bottom: 20px;
+      &:last-of-type {
+        margin-bottom: 25px;
+      }
+    }
+  }
+  &-copyright {
+    position: absolute;
+    left: 50%;
+    bottom: 20px;
+    transform: translateX(-50%);
+    color: #fff;
+    opacity: .5;
+  }
+  &-spinner {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    -webkit-animation: 1.5s spin linear infinite;
+    animation: 1.5s spin linear infinite;
+    opacity: 0;
+    transition: all .1s;
+    visibility: hidden;
+  }
+}
+
+@keyframes spin {
+  from {
+    -webkit-transform: rotate(0deg);
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+@media screen and (max-height:900px) {
+  .login {
+    &-page {
+      padding-bottom: 80px;
+      img {
+        margin-bottom: 50px;
+      }
+    }
+  }
+}

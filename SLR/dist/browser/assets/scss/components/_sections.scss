@@ -1,0 +1,349 @@
+.section {
+  position: relative;
+  z-index: 1;
+  & .block-inner {
+    &.mb-150 {
+      margin-bottom: 150px;
+    }
+  }
+  &-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    & video {
+      position: absolute;
+      min-width: 100%;
+      min-height: 100%;
+      width: auto;
+      height: auto;
+      right: 0;
+      bottom: 0;
+    }
+  }
+  &.-height-100vh {
+    height: 100vh;
+  }
+  &-heading {
+    margin-bottom: 90px;
+    &.mb-sm {
+      margin-bottom: 50px;
+    }
+  }
+  &-mask {
+    position: absolute;
+    top: -1px;
+    bottom: -1px;
+    left: 0;
+    width: 100%;
+    pointer-events: none;
+    &.-index-2 {
+      z-index: 2;
+    }
+    & .mask-top {
+      position: absolute;
+      left: 0;
+      right: 0;
+      width: 100%;
+      background-repeat: no-repeat;
+      background-position: center top;
+      background-size: cover;
+    }
+    & .mask-bot {
+      position: absolute;
+      left: 0;
+      right: 0;
+      width: 100%;
+      background-repeat: no-repeat;
+      background-position: center top;
+      background-size: cover;
+    }
+  }
+  &-bg {
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    &.-mission {
+      background: url(../img/bg/bg-section-mission.png);
+      @include rbg;
+      top: -250px;
+      bottom: -250px;
+      height: initial;
+    }
+    & img {
+      object-fit: cover;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      width: 100%;
+      height: 100%;
+    }
+    &.dark-overlay {
+      &:before {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(#0e1212, 0.6);
+        z-index: 1;
+      }
+    }
+  }
+  &-welcome {
+    background: url(../img/bg/bg-section-welcome.png);
+    @include rbg;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    max-width: 100%;
+    & h1 {
+      margin: 0 auto;
+    }
+  }
+  &-quote {
+    padding-top: 150px;
+    padding-bottom: 150px;
+    overflow: hidden;
+    & .figure {
+      opacity: .3;
+    }
+  }
+  &-mission {
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding-top: 350px;
+    padding-bottom: 400px;
+    & .section-bg {
+      background-attachment: fixed;
+    }
+    & .section-mask {
+      & .mask-top {
+        top: -5px;
+        background-image: url(../img/masks/top-triangle.mask.svg);
+        height: 120px;
+      }
+      & .mask-bot {
+        bottom: 0px;
+        background-image: url(../img/masks/bottom-triangle.mask.svg);
+        height: 230px;
+      }
+    }
+  }
+  &-clients {
+    padding-top: 60px;
+    padding-bottom: 180px;
+    overflow: hidden;
+  }
+  &-expertise {
+    background: url(../img/bg/bg-section-expertise.png);
+    @include rbg;
+    padding-top: 200px;
+    padding-bottom: 200px;
+    & .section-mask {
+      & .mask-top {
+        top: 1px;
+        background-image: url(../img/masks/top_2_triangle.mask.svg);
+        height: 110px;
+      }
+    }
+  }
+  &-industry {
+    padding-top: 150px;
+    padding-bottom: 120px;
+    overflow: hidden;
+  }
+  &-contacts {
+    background-image: url(../img/bg/bg-contacts-page.png);
+    background-position: center top;
+    background-repeat: no-repeat;
+    padding-top: 290px;
+    padding-bottom: 75px;
+    background-color: $dark;
+    border-bottom: 2px solid #fff;
+    z-index: 2;
+    & .section-mask {
+      & .mask-top {
+        top: 0px;
+        background-image: url(../img/masks/top-triangle.mask.svg);
+        height: 120px;
+      }
+    }
+    &.-contacts {
+      padding-bottom: 150px;
+      padding-top: 150px;
+      background-image: none;
+      & .section-mask {
+        display: none !important;
+      }
+    }
+  }
+  &-contacts_bot {
+    background-color: $dark;
+    @include rbg;
+    &.-home {
+      background-image: linear-gradient( to bottom, #0e1212 0%, rgba(14, 18, 18, 0) 100%), url(../img/bg/bg-home-contacts-bot.png);
+    }
+    &.-expertise {
+      background-image: linear-gradient( to bottom, #0e1212 0%, rgba(14, 18, 18, 0) 100%), url(../img/bg/bg-expertise-contacts-bot.png);
+    }
+    &.-industry {
+      background-image: linear-gradient( to bottom, #0e1212 0%, rgba(14, 18, 18, 0) 100%), url(../img/bg/bg-industry-contacts-bot.png);
+    }
+    &.-about {
+      background-image: linear-gradient( to bottom, #0e1212 0%, rgba(14, 18, 18, 0) 100%), url(../img/bg/bg-about-contacts-bot.png);
+    }
+    &.-career {
+      background-image: linear-gradient( to bottom, #0e1212 0%, rgba(14, 18, 18, 0) 100%), url(../img/bg/bg-career-contacts-bot_2.png); // background-image: linear-gradient( to bottom, #0e1212 0%, rgba(14, 18, 18, 0) 100%), url(../img/bg/bg-career-contacts-bot.png);
+    }
+    &.-contacts {
+      & .section-contacts_bot_top {
+        border-bottom: none;
+      }
+    }
+    & .copyright {
+      font-size: 0.9rem;
+      color: rgba(#fff, 0.4);
+      text-align: right;
+      display: block;
+      width: 100%;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+    }
+    &_top {
+      border-bottom: 2px solid #fff;
+      padding-top: 100px;
+      padding-bottom: 100px;
+      position: relative;
+    }
+    &_bot {
+      display: block;
+      width: 100%;
+      &:hover {
+        & .btn-white {
+          color: rgba(255, 255, 255, 0.5);
+        }
+        & .chevron {
+          right: -8px;
+        }
+      }
+      & .container {
+        padding-top: 150px;
+        padding-bottom: 150px;
+        position: relative;
+      }
+    }
+  }
+  &-top {
+    @include rbg;
+    height: 400px;
+    &.-expertise {
+      background-image: url(../img/bg/bg-section-expertise-inner.png);
+      background-position: center bottom;
+    }
+    &.-industry {
+      background-image: url(../img/bg/bg-section-industry-inner.png);
+    }
+    &.-about {
+      background-image: url(../img/bg/bg-section-about-inner.png);
+    }
+    &.-career {
+      background-image: url(../img/bg/bg-section-career-inner.png);
+    }
+    &.-infocenter {
+      background-image: url(../img/bg/bg-section-infocenter-inner.png);
+    }
+  }
+  &-inner {
+    padding-top: 150px;
+    padding-bottom: 150px;
+    overflow: hidden;
+  }
+}
+
+@media (max-width: 1400px) {
+  .section {
+    &-heading {
+      margin-bottom: 60px;
+      &.mb-sm {
+        margin-bottom: 35px;
+      }
+    }
+    &-clients {
+      & .figure {
+        right: -250px !important;
+      }
+    }
+  }
+}
+
+@media (max-width: 991px) {
+  .section {
+    &-quote {
+      padding-top: 100px;
+      padding-bottom: 100px;
+    }
+    &-mission {
+      padding-top: 200px;
+      padding-bottom: 250px;
+    }
+    &-clients {
+      padding-top: 50px;
+      padding-bottom: 100px;
+      & .figure {
+        display: none;
+      }
+    }
+    &-contacts {
+      padding-top: 250px;
+      &.-contacts {
+        padding-top: 100px;
+        padding-bottom: 100px;
+      }
+      &_bot {
+        & .btn {
+          text-align: left !important;
+        }
+        & .copyright {
+          justify-content: flex-start;
+        }
+      }
+    }
+    &-expertise {
+      padding-top: 100px;
+      padding-bottom: 100px;
+    }
+    &-industry {
+      padding-top: 100px;
+      padding-bottom: 100px;
+    }
+    &-top {
+      height: 300px;
+    }
+    &-inner {
+      padding-top: 100px;
+      padding-bottom: 100px;
+    }
+  }
+}
+
+@media (max-width: 540px) {
+  .section-welcome h1 {
+    margin-top: 20%;
+  }
+}

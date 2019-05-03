@@ -1,0 +1,27 @@
+.post {
+  &-block {
+  }
+  &-item {
+    margin-bottom: 90px;
+    &:last-child {
+      margin-bottom: 0px;
+    }
+    &_date {
+      font-size: 1rem;
+      margin-bottom: 8px;
+      color: #060808;
+    }
+    &_title {
+      margin-bottom: 33px;
+    }
+    &_img {
+      position: relative;
+      padding-bottom: 320px;
+      overflow: hidden;
+      margin-bottom: 30px;
+    }
+    &_descr {
+      margin-bottom: 20px;
+    }
+  }
+}

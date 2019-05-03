@@ -1,0 +1,45 @@
+/// Frameforks
+@import "./libs";
+// @import '~@ng-select/ng-select/themes/default.theme.css';
+/* Icons */
+
+$icomoon-font-path: "../fonts/iconmoon/" !default;
+@import './icons/style';
+/// Components Global
+@import "./reset";
+@import "./mixins";
+@import "./global";
+@import "./helpers";
+@import "./fonts";
+/// Components
+@import "./components/app";
+@import "./components/login";
+@import "./components/scrollbar-styling";
+@import "./components/table";
+@import "./components/sections";
+@import "./components/header";
+@import "./components/figures";
+@import "./components/button";
+@import "./components/lang-list";
+@import "./components/slider";
+@import "./components/link-list";
+@import "./components/border-hover";
+@import "./components/address-list";
+@import "./components/subscribe";
+@import "./components/social-list";
+@import "./components/tabs";
+@import "./components/lists";
+@import "./components/modal";
+@import "./components/vacancy";
+@import "./components/services";
+@import "./components/post";
+@import "./components/google-map";
+@import "./components/form/input-control";
+@import "./components/form/ng-select";
+@import "./components/scroll-block";
+@import "./components/scroll-top";
+@import "./components/overlay";
+@import "./components/short-list";
+@import "./components/hamburger/hamburgers";
+@import "./components/form/form-success";
+@import "./components/anim-wave";

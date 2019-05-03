@@ -1,0 +1,94 @@
+.ng-select {
+  & .ng-select-container {
+    height: 56px !important;
+    background: transparent !important;
+    border-radius: 0px;
+    border: 2px solid rgba(#fff, .6);
+    transition: all .3s;
+    & .ng-value {
+      font-size: 1.5rem;
+    }
+    & .ng-value-container .ng-input {
+      padding-left: 20px;
+      top: 8px;
+      color: #fff;
+      & input {
+        color: #fff;
+        font-size: 24px;
+      }
+    }
+  }
+  & .ng-arrow-wrapper {
+    margin-right: 15px;
+    padding-right: 0px;
+  }
+  & .ng-option {
+    border-radius: 0px !important;
+    background: transparent !important;
+    color: #fff !important;
+    padding-left: 20px;
+    padding-right: 20px;
+    & .ng-option-label {
+      font-weight: 400 !important;
+    }
+    &.ng-option-selected {
+      background: $secondary !important;
+      color: #000 !important;
+    }
+    &.ng-option-marked {
+      color: #000 !important;
+      background: $secondary !important;
+    }
+  }
+  & .ng-dropdown-panel {
+    border-radius: 0px !important;
+  }
+}
+
+.ng-dropdown-panel {
+  background: #0e1212;
+  border: 2px solid $secondary !important;
+}
+
+.ng-select.ng-select-focused:not(.ng-select-opened)>.ng-select-container {
+  border-color: #fff;
+  box-shadow: none;
+}
+
+.ng-select {
+  &.ng-select-opened {
+    & .ng-select-container {
+      border-color: $secondary;
+      border-top-color: transparent;
+    }
+    &+.form-control_label {
+      line-height: 15px;
+      font-size: 14px;
+      &:before {
+        background: $secondary;
+      }
+      &:after {
+        border-top: 2px solid $secondary;
+      }
+    }
+  }
+  & .ng-select-container {
+    & .ng-value-container {
+      padding-left: 20px;
+    }
+  }
+}
+
+.form-group {
+  &.has-value {
+    & .ng-select {
+      & .ng-select-container {
+        border-color: #fff;
+        border-top: transparent;
+      }
+      & .ng-value {
+        color: #fff;
+      }
+    }
+  }
+}

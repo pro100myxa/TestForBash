@@ -1,0 +1,73 @@
+.link-list {
+  & li {}
+  & button {
+    min-height: 100px;
+    display: flex;
+    align-items: flex-start;
+    letter-spacing: 1.12px;
+    width: 100%;
+    font-weight: 700;
+    font-family: $headings-font-family;
+    font-size: $h4-font-size;
+    padding-left: 90px;
+    position: relative;
+    text-align: left;
+    padding-top: 28px;
+    padding-bottom: 28px;
+    &:hover {
+      color: $primary;
+      & .link-list {
+        &_icon {
+          font-size: 34px;
+        }
+        &_text {
+          &:before {
+            font-size: 34px;
+          }
+        }
+      }
+    }
+  }
+  &_text {
+    &:before {
+      top: 0;
+      bottom: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      content: "";
+      font-family: "icomoon" !important;
+      speak: none;
+      font-style: normal;
+      font-weight: normal;
+      font-variant: normal;
+      text-transform: none;
+      line-height: 1;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      position: absolute;
+      left: 0px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: font-size .2s;
+      width: 90px;
+    }
+  }
+}
+
+@media (max-width: 540px) {
+  .link-list {
+    & button {
+      padding-top: 15px;
+      padding-bottom: 15px;
+      min-height: 60px;
+      padding-left: 60px;
+    }
+    &_text {
+      &:before {
+        width: 60px;
+      }
+    }
+  }
+}

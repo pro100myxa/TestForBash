@@ -1,0 +1,15 @@
+.google-map {
+  width: 100%;
+  border-bottom: 2px solid #fff;
+  & agm-map {
+    height: 400px;
+  }
+}
+
+@media (max-width: 991px) {
+  .google-map {
+    & agm-map {
+      height: 300px;
+    }
+  }
+}

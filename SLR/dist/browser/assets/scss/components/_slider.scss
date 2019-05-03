@@ -1,0 +1,129 @@
+.slider {
+  &.default-controls {
+    & .arrow {
+      cursor: pointer;
+      font-size: 40px;
+      color: rgba(#fff, 0.5);
+      transition: all 0.3s;
+      position: absolute;
+      bottom: -21px;
+      &:hover {
+        color: $secondary;
+      }
+      &-right {
+        right: 18%;
+      }
+      &-left {
+        left: 18%;
+      }
+    }
+    & .slick-dots {
+      margin-top: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      & li {
+        margin: 0 15px;
+        display: inline-flex;
+        align-items: center;
+        &.slick-active,
+        &:hover {
+          & button {
+            background: transparent;
+            border-color: #fff;
+          }
+        }
+        & button {
+          font-size: 0px;
+          width: 20px;
+          height: 20px;
+          border-radius: 50%;
+          background: rgba(#fff, 0.5);
+          border: 3px solid transparent;
+        }
+      }
+    }
+  }
+  &.expertise-slider {
+    & .slick-slide {
+      &.slick-active {}
+      &.slick-center {}
+    }
+  }
+}
+
+.expertise-slider {
+  & .slick-slide {
+    width: 1250px;
+    transition: all 0.5s;
+    &:not(.slick-center) {
+      & .expertise-slide {
+        filter: blur(2px);
+        transform: scale(0.9);
+        pointer-events: none;
+        border-color: transparent;
+      }
+    }
+  }
+  & .expertise-slide {
+    transition: all 0.5s;
+    filter: blur(0px);
+    transform: scale(1);
+    padding: 60px;
+    border: 2px solid rgba(#fff, 0.5);
+    transition: all 0.5s;
+    &_title {
+      margin-bottom: 50px;
+    }
+    &_descr {
+      margin-bottom: 30px;
+    }
+  }
+}
+
+@media (max-width: 1400px) {
+  .expertise-slider {
+    & .slick-slide {
+      width: 900px;
+    }
+    & .expertise-slide {
+      padding: 40px;
+      &_title {
+        margin-bottom: 35px;
+      }
+    }
+  }
+}
+
+@media (max-width: 991px) {
+  .expertise-slider {
+    & .expertise-slide {
+      transform: none !important;
+      filter: none !important;
+    }
+  }
+  .slider {
+    &.default-controls {
+      & .arrow {
+        bottom: -50px !important;
+        &-left {
+          left: 45%;
+        }
+        &-right {
+          right: 45%;
+        }
+      }
+    }
+    & .slick-list {
+      padding: 0 15px !important;
+    }
+  }
+}
+
+@media (max-width: 540px) {
+  .expertise-slider {
+    & .expertise-slide {
+      padding: 30px 20px;
+    }
+  }
+}

@@ -1,0 +1,45 @@
+@font-face {
+  font-family: "Panton";
+  src: url("../fonts/panton/Panton-Bold.eot");
+  src: local("Panton Bold"), local("Panton-Bold"),
+    url("../fonts/panton/Panton-Bold.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/panton/Panton-Bold.woff") format("woff"),
+    url("../fonts/panton/Panton-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Panton";
+  src: url("../fonts/panton/Panton-Regular.eot");
+  src: local("Panton Regular"), local("Panton-Regular"),
+    url("../fonts/panton/Panton-Regular.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/panton/Panton-Regular.woff") format("woff"),
+    url("../fonts/panton/Panton-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "IBM Plex Sans";
+  src: url("../fonts/ibm_plex_sans/IBMPlexSans-Medium.woff2") format("woff2"),
+    url("../fonts/ibm_plex_sans/IBMPlexSans-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "IBM Plex Sans";
+  src: url("../fonts/ibm_plex_sans/IBMPlexSans.woff2") format("woff2"),
+    url("../fonts/ibm_plex_sans/IBMPlexSans.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "IBM Plex Sans";
+  src: url("../fonts/ibm_plex_sans/IBMPlexSans-Bold.woff2") format("woff2"),
+    url("../fonts/ibm_plex_sans/IBMPlexSans-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+}

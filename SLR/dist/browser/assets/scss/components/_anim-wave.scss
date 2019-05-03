@@ -1,0 +1,23 @@
+.anim-wave {
+  height: 500px;
+  width: 100%;
+  background-image: url('../img/figures/figure-wave.svg');
+  background-position: 0px 0px;
+  background-repeat: repeat-x;
+  animation: animatedBackground 50s linear infinite;
+}
+
+@keyframes animatedBackground {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 183.5% 0;
+  }
+}
+
+@media (max-width: 992px) {
+  .anim-wave {
+    background-size: cover;
+  }
+}

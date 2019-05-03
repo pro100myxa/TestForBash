@@ -1,0 +1,73 @@
+.container {
+  max-width: 1416px;
+  width: 100%;
+}
+
+h3,
+.h3 {
+  letter-spacing: 1.44px;
+}
+
+h4,
+.h4 {
+  letter-spacing: 1.12px;
+}
+
+.main {
+  position: relative;
+}
+
+body {
+  position: relative;
+}
+
+body {
+  &.-disabled {
+    overflow-y: hidden !important;
+  }
+}
+
+@media (max-width: 1400px) {
+  .container {
+    max-width: 1140px;
+  }
+
+  h1,
+  .h1 {
+    font-size: 5rem;
+  }
+
+  html {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 991px) {
+
+  h1,
+  .h1 {
+    font-size: 4.5rem;
+  }
+
+  html {
+    font-size: 0.8rem;
+  }
+
+  h2,
+  .h2 {
+    font-size: 3.5rem;
+  }
+}
+
+@media (max-width: 540px) {
+
+  h1,
+  .h1 {
+    font-size: 3rem;
+  }
+
+  h3,
+  .h3 {
+    font-size: 2rem;
+  }
+}

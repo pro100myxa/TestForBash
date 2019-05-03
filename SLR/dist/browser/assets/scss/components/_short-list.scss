@@ -1,0 +1,26 @@
+.short {
+  &-list {}
+  &-item {
+    margin-bottom: 70px;
+    &:last-child {
+      margin-bottom: 0px;
+    }
+    &_title {
+      margin-bottom: 50px;
+    }
+    &_descr {
+      margin-bottom: 40px;
+    }
+    &_footer {}
+  }
+}
+
+@media (max-width: 1400px) {
+  .short {
+    &-item {
+      &_title {
+        margin-bottom: 35px;
+      }
+    }
+  }
+}

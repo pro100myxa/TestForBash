@@ -1,0 +1,18 @@
+.vacancy {
+  &-block {}
+  &-item {
+    margin-bottom: 25px;
+    &:last-child {
+      margin-bottom: 0px;
+    }
+    &_title {
+      margin-bottom: 5px;
+    }
+    &_list {
+      padding-left: 22px;
+      & li {
+        margin-bottom: 7px;
+      }
+    }
+  }
+}

@@ -1,0 +1,111 @@
+.modal {
+  &-dialog {
+    padding: 0 15px;
+  }
+  &-serice {
+    & .modal-content {
+      // &:after {
+      //   content: '';
+      //   display: block;
+      //   position: absolute;
+      //   bottom: 0;
+      //   pointer-events: none;
+      //   left: 0;
+      //   right: 0;
+      //   width: 100%;
+      //   height: 100%; // background-image: linear-gradient(to top, #fff 0%, rgba(#fff, .9) 13%, rgba(#fff, 0) 20%, transparent 20%, transparent 100%);
+      // }
+    }
+    & .modal-body {
+      height: 550px;
+      overflow-y: auto;
+      padding-bottom: 100px !important;
+    }
+  }
+  &-content {
+    border-radius: 0px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2), 0 10px 80px rgba(0, 0, 0, 0.3);
+  }
+  &-lg {
+    & .modal {
+      &-content {}
+      &-header {
+        border-bottom: 0px;
+        padding: 0px;
+        position: relative;
+        padding-right: 20px;
+        padding: 60px 60px 60px 60px;
+        border-bottom: 1px solid #e5e5e5;
+      }
+      &-body {
+        padding: 40px 60px 20px 60px;
+      }
+      &-close {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 50px;
+        font-size: 28px;
+        color: #9e9e9e;
+        &:hover {
+          color: $primary;
+        }
+        &:active {
+          color: darken($primary, 20%);
+        }
+      }
+    }
+  }
+}
+
+services-modal-component {
+  & .modal {
+    height: 100%;
+    &-lg {
+      max-height: 100%;
+      height: 100%;
+      padding: 15px;
+      margin: 0px;
+    }
+    &-content {
+      max-height: 100%;
+      height: 100%;
+    }
+    &-header {
+      min-height: 95px;
+    }
+  }
+}
+
+@media (max-width: 991px) {
+  .modal {
+    &-lg {
+      max-width: 100%;
+      width: 100%;
+      & .modal {
+        &-close {
+          font-size: 20px;
+          right: 20px;
+        }
+        &-header {
+          padding: 30px;
+        }
+        &-body {
+          padding: 20px 30px 15px 30px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 540px) {
+  .modal {
+    &-lg {
+      & .modal {
+        &-body {
+          margin-right: 0px;
+        }
+      }
+    }
+  }
+}
